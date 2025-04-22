@@ -1,4 +1,4 @@
-# 🧠 Compiler Design Project: Lexical Analyzer using Lex
+# 🧠 Compiler Design Questions: Lexical Analyzer using Lex
 
 This project is part of the **Compiler Design** coursework and demonstrates how to write a **Lexical Analyzer** using the **Lex tool**. It scans the input source code and breaks it into a sequence of **tokens** like identifiers, keywords, numbers, and operators.
 
