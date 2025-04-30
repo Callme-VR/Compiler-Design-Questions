@@ -1,3 +1,5 @@
+design a lex code to impelement a dfa over {a,b} which accept set of all possible string where to check length of 3  
+
 %{
 #include <stdio.h>
 %}
