@@ -1,3 +1,5 @@
+question->desing a dfa in lex code over symbol which contain set string where every string start with a's and end with b's
+
 %{
 #include <stdio.h>
 %}
