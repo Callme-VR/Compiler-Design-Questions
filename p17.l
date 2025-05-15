@@ -1,19 +1,19 @@
 %{
 #include "y.tab.h"
+#include <stdlib.h>
 %}
 
-digit   [0-9]+
+
 
 %%
 
-{digit}     { yylval = atoi(yytext); return NUMBER; }
+[0-9]+      { yylval = atoi(yytext); return NUMBER; }
 "+"         { return PLUS; }
 "-"         { return MINUS; }
 "*"         { return MUL; }
-{return DIV}
-"/"
-"("         { return LP; a}
+"/"         { return DIV; }
+"("         { return LP; }
 ")"         { return RP; }
-[ \t\n]     ;   // Ignore whitespace
-.           { return yytext[0]; } // catch all for invalid characters
+.           { return yytext[0]; }
+
 %%

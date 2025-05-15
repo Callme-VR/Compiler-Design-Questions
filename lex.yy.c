@@ -362,17 +362,17 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[15] =
     {   0,
-        0,    0,   10,    8,    7,    7,    5,    6,    4,    2,
-        3,    1,    1,    0
+        0,    0,   10,    8,    9,    6,    7,    4,    2,    3,
+        5,    1,    1,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    1,    1,    1,    1,    1,    1,    1,    4,
-        5,    6,    7,    1,    8,    1,    1,    9,    9,    9,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    3,
+        4,    5,    6,    1,    7,    1,    8,    9,    9,    9,
         9,    9,    9,    9,    9,    9,    9,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -446,8 +446,9 @@ char *yytext;
 #line 1 "p17.l"
 #line 2 "p17.l"
 #include "y.tab.h"
-#line 450 "lex.yy.c"
+#include <stdlib.h>
 #line 451 "lex.yy.c"
+#line 452 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -664,10 +665,10 @@ YY_DECL
 		}
 
 	{
-#line 7 "p17.l"
+#line 8 "p17.l"
 
 
-#line 671 "lex.yy.c"
+#line 672 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -726,48 +727,47 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 9 "p17.l"
+#line 10 "p17.l"
 { yylval = atoi(yytext); return NUMBER; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 10 "p17.l"
+#line 11 "p17.l"
 { return PLUS; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 11 "p17.l"
+#line 12 "p17.l"
 { return MINUS; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 12 "p17.l"
+#line 13 "p17.l"
 { return MUL; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 13 "p17.l"
-{ return LP; }
+#line 14 "p17.l"
+{ return DIV; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 14 "p17.l"
-{ return RP; }
+#line 15 "p17.l"
+{ return LP; }
 	YY_BREAK
 case 7:
-/* rule 7 can match eol */
 YY_RULE_SETUP
-#line 15 "p17.l"
-;   // Ignore whitespace
+#line 16 "p17.l"
+{ return RP; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 16 "p17.l"
-{ return yytext[0]; } // catch all for invalid characters
+#line 17 "p17.l"
+{ return yytext[0]; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 17 "p17.l"
+#line 19 "p17.l"
 ECHO;
 	YY_BREAK
 #line 774 "lex.yy.c"
@@ -1775,6 +1775,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 17 "p17.l"
+#line 19 "p17.l"
 
 

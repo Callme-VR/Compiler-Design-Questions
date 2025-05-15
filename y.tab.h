@@ -58,9 +58,10 @@ extern int yydebug;
     PLUS = 259,                    /* PLUS  */
     MINUS = 260,                   /* MINUS  */
     MUL = 261,                     /* MUL  */
-    LP = 262,                      /* LP  */
-    RP = 263,                      /* RP  */
-    UMINUS = 264                   /* UMINUS  */
+    DIV = 262,                     /* DIV  */
+    LP = 263,                      /* LP  */
+    RP = 264,                      /* RP  */
+    UMINUS = 265                   /* UMINUS  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -73,9 +74,10 @@ extern int yydebug;
 #define PLUS 259
 #define MINUS 260
 #define MUL 261
-#define LP 262
-#define RP 263
-#define UMINUS 264
+#define DIV 262
+#define LP 263
+#define RP 264
+#define UMINUS 265
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED

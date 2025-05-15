@@ -4,9 +4,9 @@ int yylex();
 void yyerror(const char *s);
 %}
 
-%token NUMBER PLUS MINUS MUL LP RP
+%token NUMBER PLUS MINUS MUL DIV LP RP
 %left PLUS MINUS
-%left MUL
+%left MUL DIV
 %right UMINUS
 
 %%
@@ -14,6 +14,7 @@ void yyerror(const char *s);
 E: E PLUS E
  | E MINUS E
  | E MUL E
+ | E DIV E
  | MINUS E %prec UMINUS
  | LP E RP
  | NUMBER
